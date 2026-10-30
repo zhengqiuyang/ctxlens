@@ -1,0 +1,6 @@
+{"role":"system","content":"You are a helpful coding agent."}
+{"role":"user","content":"Hello, please fix the bug."}
+{"type":"tool_call","name":"read_file","content":"{\"path\":\"a.py\"}"}
+{"type":"tool_result","name":"read_file","content":"def broken(): pass ..."}
+{"role":"assistant","content":"The bug is in broken(): it never returns."}
+{"timestamp":"2026-10-30T09:00:00Z","type":"telemetry","heartbeat":true}

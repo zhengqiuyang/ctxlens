@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="870" viewBox="0 0 960 870" font-family="ui-monospace,'Cascadia Code',Consolas,Menlo,monospace" font-size="13">
+<rect width="960" height="720" fill="#0b0e14"/>
+<text x="32" y="42" fill="#c7d0e0" font-size="20" font-weight="bold">ctxlens — session X-ray</text>
+<text x="32" y="64" fill="#6b7689">agent: claude   model: claude-sonnet-4-5   session: demo-2am-payment-…</text>
+<rect x="32.0" y="96" width="133.9" height="34" fill="#b267e6"/>
+<text x="99.0" y="117.0" fill="#0b0e14" font-size="11" text-anchor="middle">system 14.9%</text>
+<rect x="165.9" y="96" width="3.7" height="34" fill="#4fc1ff"/>
+<rect x="169.7" y="96" width="40.5" height="34" fill="#5b8def"/>
+<rect x="210.2" y="96" width="24.1" height="34" fill="#e8c468"/>
+<rect x="234.3" y="96" width="693.7" height="34" fill="#ff6b6b"/>
+<text x="581.1" y="117.0" fill="#0b0e14" font-size="11" text-anchor="middle">tool results 77.4%</text>
+<rect x="32.0" y="96" width="896.0" height="34" fill="none" stroke="#1c2230"/>
+<text x="32.0" y="88" fill="#6b7689">live context 49,872 tokens of 200,000 window  · buckets scaled to real usage</text>
+<rect x="32.0" y="141" width="10" height="10" fill="#b267e6"/>
+<text x="48.0" y="150" fill="#c7d0e0" font-size="11">system  7,454</text>
+<rect x="332.0" y="141" width="10" height="10" fill="#4fc1ff"/>
+<text x="348.0" y="150" fill="#c7d0e0" font-size="11">user  208</text>
+<rect x="632.0" y="141" width="10" height="10" fill="#5b8def"/>
+<text x="648.0" y="150" fill="#c7d0e0" font-size="11">assistant  2,254</text>
+<rect x="32.0" y="159" width="10" height="10" fill="#e8c468"/>
+<text x="48.0" y="168" fill="#c7d0e0" font-size="11">tool calls  1,343</text>
+<rect x="332.0" y="159" width="10" height="10" fill="#ff6b6b"/>
+<text x="348.0" y="168" fill="#c7d0e0" font-size="11">tool results  38,613</text>
+<text x="32.0" y="212" fill="#c7d0e0" font-weight="bold">bloat curve — context size across the session</text>
+<line x1="32" y1="236" x2="856" y2="236" stroke="#1c2230"/>
+<text x="862" y="240" fill="#6b7689" font-size="10">193,115</text>
+<line x1="32" y1="288" x2="856" y2="288" stroke="#1c2230"/>
+<text x="862" y="292" fill="#6b7689" font-size="10">149,389</text>
+<line x1="32" y1="341" x2="856" y2="341" stroke="#1c2230"/>
+<text x="862" y="345" fill="#6b7689" font-size="10">105,663</text>
+<line x1="32" y1="394" x2="856" y2="394" stroke="#1c2230"/>
+<text x="862" y="398" fill="#6b7689" font-size="10">61,937</text>
+<line x1="32" y1="446" x2="856" y2="446" stroke="#1c2230"/>
+<text x="862" y="450" fill="#6b7689" font-size="10">18,212</text>
+<line x1="856.0" y1="236" x2="856.0" y2="446" stroke="#ff6b6b" stroke-dasharray="4 4" opacity="0.7"/>
+<path d="M 856.0 452 l -5 8 l 10 0 z" fill="#ff6b6b" opacity="0.8"/>
+<polyline points="32.0,446.0 114.4,389.4 196.8,332.8 279.2,310.6 361.6,261.9 444.0,241.0 526.4,236.0 608.8,441.7 691.2,426.5 773.6,417.3 856.0,408.0" fill="none" stroke="#4fc1ff" stroke-width="2"/>
+<text x="32.0" y="500" fill="#c7d0e0" font-weight="bold">top offenders — the blocks that ate the window</text>
+<text x="32.0" y="524" fill="#6b7689" font-size="11"> 1</text>
+<rect x="60.0" y="514" width="300.0" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="524" fill="#c7d0e0" font-size="11">file result · payments/processor.py</text>
+<text x="928" y="524" fill="#6b7689" font-size="11" text-anchor="end">46,800</text>
+<text x="372.0" y="536" fill="#6b7689" font-size="10">import asyncio from dataclasses import dataclass # ... 1,900 lines of p…</text>
+<text x="32.0" y="554" fill="#6b7689" font-size="11"> 2</text>
+<rect x="60.0" y="544" width="201.9" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="554" fill="#c7d0e0" font-size="11">tool result · WebFetch</text>
+<text x="928" y="554" fill="#6b7689" font-size="11" text-anchor="end">31,500</text>
+<text x="372.0" y="566" fill="#6b7689" font-size="10">Idempotency Keys — Stripe Documentation ... (full page body, navigation…</text>
+<text x="32.0" y="584" fill="#6b7689" font-size="11"> 3</text>
+<rect x="60.0" y="574" width="116.7" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="584" fill="#c7d0e0" font-size="11">file result · payments/retry_policy.py</text>
+<text x="928" y="584" fill="#6b7689" font-size="11" text-anchor="end">18,200</text>
+<text x="372.0" y="596" fill="#6b7689" font-size="10">RETRY_WINDOWS = {"default": 3, "webhook": 5} # ... policy table ...</text>
+<text x="32.0" y="614" fill="#6b7689" font-size="11"> 4</text>
+<rect x="60.0" y="604" width="79.5" height="13" fill="#b267e6" opacity="0.85"/>
+<text x="372.0" y="614" fill="#c7d0e0" font-size="11">system · base_instructions</text>
+<text x="928" y="614" fill="#6b7689" font-size="11" text-anchor="end">12,400</text>
+<text x="372.0" y="626" fill="#6b7689" font-size="10">You are Claude Code, Anthropic's official CLI for Claude.</text>
+<text x="32.0" y="644" fill="#6b7689" font-size="11"> 5</text>
+<rect x="60.0" y="634" width="61.5" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="644" fill="#c7d0e0" font-size="11">file result · tests/test_payments.py</text>
+<text x="928" y="644" fill="#6b7689" font-size="11" text-anchor="end">9,600</text>
+<text x="372.0" y="656" fill="#6b7689" font-size="10">def test_charge_idempotent(): ... 412 lines of payment tests ...</text>
+<text x="32.0" y="674" fill="#6b7689" font-size="11"> 6</text>
+<rect x="60.0" y="664" width="27.2" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="674" fill="#c7d0e0" font-size="11">tool result · Bash</text>
+<text x="928" y="674" fill="#6b7689" font-size="11" text-anchor="end">4,240</text>
+<text x="372.0" y="686" fill="#6b7689" font-size="10">============================= test session starts =====================…</text>
+<text x="32.0" y="704" fill="#6b7689" font-size="11"> 7</text>
+<rect x="60.0" y="694" width="22.1" height="13" fill="#b267e6" opacity="0.85"/>
+<text x="372.0" y="704" fill="#c7d0e0" font-size="11">summary · summary</text>
+<text x="928" y="704" fill="#6b7689" font-size="11" text-anchor="end">3,440</text>
+<text x="372.0" y="716" fill="#6b7689" font-size="10">This session is being continued from a previous conversation: double-ch…</text>
+<text x="32.0" y="734" fill="#6b7689" font-size="11"> 8</text>
+<rect x="60.0" y="724" width="20.0" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="734" fill="#c7d0e0" font-size="11">tool result · Bash</text>
+<text x="928" y="734" fill="#6b7689" font-size="11" text-anchor="end">3,120</text>
+<text x="372.0" y="746" fill="#6b7689" font-size="10">47 passed in 11.83s ... coverage report follows ...</text>
+<text x="32.0" y="764" fill="#6b7689" font-size="11"> 9</text>
+<rect x="60.0" y="754" width="18.3" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="764" fill="#c7d0e0" font-size="11">tool result · Bash</text>
+<text x="928" y="764" fill="#6b7689" font-size="11" text-anchor="end">2,860</text>
+<text x="372.0" y="776" fill="#6b7689" font-size="10">47 passed in 10.91s ... short tracebacks, warning summary ...</text>
+<text x="32.0" y="794" fill="#6b7689" font-size="11">10</text>
+<rect x="60.0" y="784" width="14.4" height="13" fill="#ff6b6b" opacity="0.85"/>
+<text x="372.0" y="794" fill="#c7d0e0" font-size="11">tool result · Grep</text>
+<text x="928" y="794" fill="#6b7689" font-size="11" text-anchor="end">2,240</text>
+<text x="372.0" y="806" fill="#6b7689" font-size="10">payments/retry_policy.py:12: RETRY_WINDOWS = ... (18 matches across 6 f…</text>
+<text x="32.0" y="852" fill="#6b7689" font-size="11">ctxlens v0.1.0 — deterministic estimates, zero LLM, zero network  · sizes scaled to the agent's own usage report</text>
+</svg>
