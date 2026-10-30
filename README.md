@@ -43,7 +43,8 @@ answers three questions, deterministically, without a single LLM call:
 ## Quick start
 
 ```bash
-pip install ctxlens
+uv tool install git+https://github.com/zhengqiuyang/ctxlens
+# or: pip install git+https://github.com/zhengqiuyang/ctxlens
 ```
 
 Look at the built-in fictional session first — no real logs touched:

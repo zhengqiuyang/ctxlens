@@ -33,7 +33,8 @@ ctxlens 就是那张 X 光片。它读取你磁盘上现成的会话日志，确
 ## 快速开始
 
 ```bash
-pip install ctxlens
+uv tool install git+https://github.com/zhengqiuyang/ctxlens
+# 或者: pip install git+https://github.com/zhengqiuyang/ctxlens
 ```
 
 先看内置的虚构会话——不碰任何真实日志：
