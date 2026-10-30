@@ -20,7 +20,7 @@ Anything not matching the shape of the day is warned about and skipped.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 from ..models import (
     KIND_ASSISTANT,
@@ -34,7 +34,7 @@ from ..models import (
     ParsedSession,
     UsagePoint,
 )
-from .base import clean_preview, content_text, first_str, iter_json_lines, make_block
+from .base import content_text, first_str, iter_json_lines, make_block
 
 _CONTINUATION_PREFIX = "this session is being continued from a previous conversation"
 _FILE_RESULT_TOOLS = {"read", "view", "cat"}

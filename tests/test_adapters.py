@@ -5,7 +5,6 @@ from ctxlens.models import (
     KIND_ASSISTANT,
     KIND_FILE_RESULT,
     KIND_REASONING,
-    KIND_SUMMARY,
     KIND_SYSTEM,
     KIND_TOOL_CALL,
     KIND_TOOL_RESULT,

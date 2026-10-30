@@ -7,8 +7,8 @@ the tests trivial.
 
 from __future__ import annotations
 
-from xml.sax.saxutils import escape
 from typing import List, Tuple
+from xml.sax.saxutils import escape
 
 from .. import __version__
 from ..models import BUCKET_ORDER, SessionReport

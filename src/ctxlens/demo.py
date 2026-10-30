@@ -8,6 +8,7 @@ anyone's real logs.
 
 from __future__ import annotations
 
+from .adapters.base import clean_preview
 from .models import (
     KIND_ASSISTANT,
     KIND_FILE_RESULT,
@@ -21,7 +22,6 @@ from .models import (
     ParsedSession,
     UsagePoint,
 )
-from .adapters.base import clean_preview
 
 
 def _b(kind: str, tokens: int, name: str, preview: str, dropped: bool = False) -> Block:

@@ -63,7 +63,7 @@ def test_svg_draws_curve_and_cuts():
 
 
 def test_svg_escapes_hostile_text():
-    from ctxlens.models import Block, ParsedSession, KIND_USER
+    from ctxlens.models import KIND_USER, Block, ParsedSession
 
     parsed = ParsedSession(agent="claude", blocks=[
         Block(kind=KIND_USER, tokens=100, index=0, name="user",

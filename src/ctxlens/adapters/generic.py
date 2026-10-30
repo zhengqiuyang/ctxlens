@@ -11,7 +11,6 @@ native adapter, but it makes every JSONL session log at least *lookable*.
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from typing import Any, Dict, List
 

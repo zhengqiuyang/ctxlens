@@ -39,7 +39,7 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+dev = ["pytest>=8.0", "ruff>=0.4"]
 
 [project.scripts]
 ctxlens = "ctxlens.cli:main"
@@ -54,3 +54,12 @@ packages = ["src/ctxlens"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+# The project keeps typing.List/Optional spelling for 3.9 compatibility,
+# so pyupgrade (UP) rewrites are deliberately not selected.
+select = ["E4", "E7", "E9", "F", "I"]
